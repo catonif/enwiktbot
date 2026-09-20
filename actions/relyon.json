@@ -1,0 +1,9 @@
+{
+	"pagetitle": "rely on",
+	"editsummary": "\"rely on\" failed RFD",
+	"substitutions": [
+		["[[rely on]]", "[[rely]] on"],
+		["[[rely on|relied on]]", "[[rely|relied]] on"],
+		["[[rely on|relying on]]", "[[rely|relying]] on"]
+	]
+}
