@@ -11,7 +11,7 @@ print("Loading action", action_path)
 print("====")
 
 with open(action_path, "r") as action_file:
-    action = json.load(action_file)
+	action = json.load(action_file)
 
 pagetitle = action['pagetitle']
 editsummary = action['editsummary']
@@ -20,7 +20,8 @@ substitutions = action['substitutions']
 page = pywikibot.Page(site, pagetitle)
 
 for ref_page in page.backlinks():
-	if ref_page.namespace() == '':
+	namespace = ref_page.namespace()
+	if namespace == '' or namespace == 'Reconstruction':
 		og_text = ref_page.text
 		out_text = og_text
 		for str_from, str_to in substitutions:
@@ -46,3 +47,6 @@ for ref_page in page.backlinks():
 			elif accept == 'q':
 				sys.exit(0)
 			print("====")
+		else:
+			# Null-edit.
+			ref_page.touch()
