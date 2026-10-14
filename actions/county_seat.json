@@ -1,0 +1,9 @@
+{
+	"pagetitle": "county seat",
+	"editsummary": "remove incoming links to \"county seat\" after failed RFD",
+	"substitutions": [
+		["[[county seat]]", "[[county]] [[seat]]"],
+		["{{l|en|county seat}}", "[[county]] [[seat]]"],
+		["[[county seat|seat]]", "[[seat]]"]
+	]
+}
